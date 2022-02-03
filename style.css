@@ -1,0 +1,122 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Red Hat Display', sans-serif;
+	overflow: hidden;
+}
+
+:root {
+	--pale-blue: hsl(225, 100%, 94%);
+	--Bright-blue: hsl(245, 75%, 52%);
+	--Very-pale-blue: hsl(225, 100%, 98%);
+	--Desaturated-blue: hsl(224, 23%, 55%);
+	--Dark-blue: hsl(223, 47%, 23%);
+}
+
+body {
+	height: 100vh;
+	width: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+
+	height: fit-content;
+	width: 25vw;
+
+	background-color: var(--Very-pale-blue);
+
+	border-radius: 10px;
+
+	box-shadow: var(--Desaturated-blue) 0px 13px 27px -5px;
+}
+.card__image img {
+	width: 100%;
+}
+.card__title {
+	margin-top: 1.25rem;
+
+	text-align: center;
+	font-size: 1rem;
+}
+
+.card__description {
+	margin-top: 1rem;
+
+	text-align: center;
+	font-size: 0.8rem;
+
+	display: flex;
+	justify-content: center;
+}
+
+.card__description p {
+	width: 60%;
+	color: var(--Desaturated-blue);
+}
+
+.card__price {
+	margin-top: 1.3rem;
+
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.price {
+	display: flex;
+	align-items: center;
+	gap: 0.3rem;
+}
+
+.price h3,
+p {
+	font-size: 0.9rem;
+}
+.card__price a {
+	color: var(--Bright-blue);
+	font-weight: 700;
+}
+
+.card__buy,
+.card__cancel {
+	margin-top: 2rem;
+	text-align: center;
+}
+.card__cancel {
+	margin-top: 1rem;
+}
+.card__buy button,
+.card__cancel button {
+	padding: 0.4rem 5rem;
+
+	border-radius: 10px;
+	border: none;
+
+	background-color: var(--Bright-blue);
+	color: var(--Very-pale-blue);
+
+	font-size: 0.9rem;
+
+	box-shadow: var(--Desaturated-blue) 0px 13px 27px -5px;
+}
+
+.card__cancel button {
+	box-shadow: none;
+	background: none;
+
+	color: var(--Desaturated-blue);
+
+	margin-bottom: 1rem;
+}
+
+@media (max-width: 1024px) {
+	.card {
+		width: 90vw;
+	}
+}
